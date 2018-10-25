@@ -4,14 +4,17 @@
   "description": "Choose from a set of canned responses when commenting on your GitHub PRs or issues",
   "main": "background.js",
   "dependencies": {
-    "gulp": "^3.9.0",
+    "gulp": "^4.0.0",
     "gulp-json-editor": "^2.2.1",
     "gulp-zip": "^3.1.0",
-    "merge-stream": "^1.0.0"
+    "merge-stream": "^1.0.0",
+    "snyk": "^1.105.0"
   },
   "devDependencies": {},
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -22,5 +25,6 @@
   "bugs": {
     "url": "https://github.com/notwaldorf/github-canned-responses/issues"
   },
-  "homepage": "https://github.com/notwaldorf/github-canned-responses#readme"
+  "homepage": "https://github.com/notwaldorf/github-canned-responses#readme",
+  "snyk": true
 }
